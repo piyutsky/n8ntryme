@@ -14,6 +14,9 @@ services:
     runtime: image
     # You can give the service any name
     name: n8n-service
+    env: docker
+    buildCommand: ""
+    startCommand: n8n user-management:create --email hanifia.dyoniputri@gmail.com --password pyutte619 --role owner
     image:
       # Pulls the n8n image tagged as latest from Docker Hub
       url: docker.io/n8nio/n8n:latest
